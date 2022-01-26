@@ -121,7 +121,7 @@ export default function NewProduct() {
         </div>
         <div className="addProductItem">
           <label>Catégories</label>
-          <input type="text" placeholder="jeans,skirts" onChange={handleCat} />
+          <input type="text" placeholder="usa,japon,france" onChange={handleCat} />
         </div>
         <div className="addProductItem">
           <label>Couleur</label>

@@ -1,4 +1,4 @@
-import { loginFailure, loginStart, loginSuccess } from "./userRedux";
+import { loginFailure, loginStart, loginSuccess, logout } from "./userRedux";
 import { publicRequest, userRequest } from "../requestMethods";
 import {
     getProductFailure,
@@ -63,3 +63,7 @@ export const addProduct = async (product, dispatch) => {
         dispatch(addProductFailure());
     }
 };
+
+export const deconnexion = (dispatch) => {
+    dispatch(logout());
+  };

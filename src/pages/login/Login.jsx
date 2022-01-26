@@ -22,8 +22,9 @@ const Login = () => {
         justifyContent: "center",
       }}
     >
+      <h2>Login Admin</h2>
       <input
-        style={{ padding: 10, marginBottom: 20 }}
+        style={{ padding: 10, marginTop: 20 , marginBottom: 20 }}
         type="text"
         placeholder="username"
         onChange={(e) => setUsername(e.target.value)}

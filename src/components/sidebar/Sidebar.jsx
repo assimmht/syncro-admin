@@ -14,8 +14,16 @@ import {
   Report,
 } from "@material-ui/icons";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { deconnexion } from "../../redux/apiCalls";
 
 export default function Sidebar() {
+  const dispatch = useDispatch();
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    deconnexion(dispatch);
+  };
   return (
     <div className="sidebar">
       <div className="sidebarWrapper">
@@ -36,6 +44,11 @@ export default function Sidebar() {
               <TrendingUp className="sidebarIcon" />
               Ventes
             </li>
+            <Link style= {{textDecoration: 'none'}} onClick={handleClick} >
+            <li className="sidebarListItem">
+              Déconnexion
+            </li>
+            </Link>
           </ul>
         </div>
         <div className="sidebarMenu">
